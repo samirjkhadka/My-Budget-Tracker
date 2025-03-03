@@ -9,7 +9,6 @@ import StatsScreen from "../screens/StatsScreen";
 import ProfileScreen from "../screens/ProfileScreen";
 import AccountsScreen from "../screens/AccountsScreen";
 
-
 const StackNavigator = () => {
   const Stack = createNativeStackNavigator();
   const Tab = createBottomTabNavigator();
@@ -28,9 +27,19 @@ const StackNavigator = () => {
             headerShown: false,
             tabBarIcon: ({ focused }) =>
               focused ? (
-                <Ionicons name="shuffle-outline" size={30} color={"#E97451"} />
+                <Ionicons
+                  style={{ paddingTop: 3 }}
+                  name="shuffle-outline"
+                  size={30}
+                  color={"#E97451"}
+                />
               ) : (
-                <Ionicons name="shuffle-outline" size={30} color={"#A0A0A0"} />
+                <Ionicons
+                  style={{ paddingTop: 3 }}
+                  name="shuffle-outline"
+                  size={30}
+                  color={"#A0A0A0"}
+                />
               ),
           }}
         />
@@ -41,9 +50,19 @@ const StackNavigator = () => {
             headerShown: false,
             tabBarIcon: ({ focused }) =>
               focused ? (
-                <Ionicons name="card-outline" size={30} color={"#E97451"} />
+                <Ionicons
+                  style={{ paddingTop: 3 }}
+                  name="card-outline"
+                  size={30}
+                  color={"#E97451"}
+                />
               ) : (
-                <Ionicons name="card-outline" size={30} color={"#A0A0A0"} />
+                <Ionicons
+                  style={{ paddingTop: 3 }}
+                  name="card-outline"
+                  size={30}
+                  color={"#A0A0A0"}
+                />
               ),
           }}
         />
@@ -55,12 +74,14 @@ const StackNavigator = () => {
             tabBarIcon: ({ focused }) =>
               focused ? (
                 <Ionicons
+                  style={{ paddingTop: 3 }}
                   name="bar-chart-outline"
                   size={30}
                   color={"#E97451"}
                 />
               ) : (
                 <Ionicons
+                  style={{ paddingTop: 3 }}
                   name="bar-chart-outline"
                   size={30}
                   color={"#A0A0A0"}
@@ -76,12 +97,14 @@ const StackNavigator = () => {
             tabBarIcon: ({ focused }) =>
               focused ? (
                 <Ionicons
+                  style={{ paddingTop: 3 }}
                   name="person-circle-outline"
                   size={30}
                   color={"#E97451"}
                 />
               ) : (
                 <Ionicons
+                  style={{ paddingTop: 3 }}
                   name="person-circle-outline"
                   size={30}
                   color={"#A0A0A0"}

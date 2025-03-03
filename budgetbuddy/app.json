@@ -29,6 +29,7 @@
             "./node_modules/@react-native-vector-icons/ionicons/fonts/ionicons.ttf",
             "./node_modules/@react-native-vector-icons/lucide/fonts/lucide.ttf",
             "./node_modules/@react-native-vector-icons/material-icons/fonts/MaterialIcons.ttf",
+            "./node_modules/@react-native-vector-icons/material-design-icons/fonts/MaterialDesignIcons.ttf",
             "./node_modules/@react-native-vector-icons/octicons/fonts/Octicons.ttf"
           ]
         }
