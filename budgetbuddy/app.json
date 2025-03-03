@@ -1,0 +1,48 @@
+{
+  "expo": {
+    "name": "budgetbuddy",
+    "slug": "budgetbuddy",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "plugins": [
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./node_modules/@react-native-vector-icons/ant-design/fonts/antdesign.ttf",
+            "./node_modules/@react-native-vector-icons/feather/fonts/feather.ttf",
+            "./node_modules/@react-native-vector-icons/fontawesome6/fonts/FontAwesome6_Regular.ttf",
+            "./node_modules/@react-native-vector-icons/fontawesome6/fonts/FontAwesome6_Brands.ttf",
+            "./node_modules/@react-native-vector-icons/fontawesome6/fonts/FontAwesome6_Solid.ttf",
+            "./node_modules/@react-native-vector-icons/foundation/fonts/foundation.ttf",
+            "./node_modules/@react-native-vector-icons/ionicons/fonts/ionicons.ttf",
+            "./node_modules/@react-native-vector-icons/lucide/fonts/lucide.ttf",
+            "./node_modules/@react-native-vector-icons/material-icons/fonts/MaterialIcons.ttf",
+            "./node_modules/@react-native-vector-icons/octicons/fonts/Octicons.ttf"
+          ]
+        }
+      ]
+    ],
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.anonymous.budgetbuddy"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}
