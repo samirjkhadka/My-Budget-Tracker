@@ -1,10 +1,11 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Pressable, StyleSheet, Text, View } from "react-native";
 import React, { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Ionicons, MaterialIcons } from "@expo/vector-icons";
 import moment from "moment";
 
 const HomeScreen = () => {
+  const [option, setOption] = useState("Daily");
   const [currentDate, setCurrentDate] = useState(moment());
   const handlePrevMonth = () => {
     setCurrentDate((prevDate) => moment(prevDate).subtract(1, "month"));
@@ -50,6 +51,74 @@ const HomeScreen = () => {
           size={24}
           color="black"
         />
+      </View>
+
+      <View
+        style={{
+          paddingTop: 15,
+          flexDirection: "row",
+          justifyContent: "space-between",
+          alignItems: "center",
+          gap: 12,
+          marginHorizontal: 12,
+          backgroundColor: "white",
+        }}
+      >
+        <Pressable onPress={() => setOption("Daily")}>
+          <Text
+            style={{
+              color: option === "Daily" ? "black" : "gray",
+              fontSize: 14,
+              fontWeight: "500",
+            }}
+          >
+            Daily
+          </Text>
+        </Pressable>
+        <Pressable onPress={() => setOption("Calendar")}>
+          <Text
+            style={{
+              color: option === "Calendar" ? "black" : "gray",
+              fontSize: 14,
+              fontWeight: "500",
+            }}
+          >
+            Calendar
+          </Text>
+        </Pressable>
+        <Pressable onPress={() => setOption("Monthly")}>
+          <Text
+            style={{
+              color: option === "Monthly" ? "black" : "gray",
+              fontSize: 14,
+              fontWeight: "500",
+            }}
+          >
+            Monthly
+          </Text>
+        </Pressable>
+        <Pressable onPress={() => setOption("Summary")}>
+          <Text
+            style={{
+              color: option === "Summary" ? "black" : "gray",
+              fontSize: 14,
+              fontWeight: "500",
+            }}
+          >
+            Summary
+          </Text>
+        </Pressable>
+        <Pressable onPress={() => setOption("Description")}>
+          <Text
+            style={{
+              color: option === "Description" ? "black" : "gray",
+              fontSize: 14,
+              fontWeight: "500",
+            }}
+          >
+            Description
+          </Text>
+        </Pressable>
       </View>
     </SafeAreaView>
   );
