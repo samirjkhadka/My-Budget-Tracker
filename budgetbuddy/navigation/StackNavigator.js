@@ -8,6 +8,7 @@ import HomeScreen from "../screens/HomeScreen";
 import StatsScreen from "../screens/StatsScreen";
 import ProfileScreen from "../screens/ProfileScreen";
 import AccountsScreen from "../screens/AccountsScreen";
+import createExpense from "../screens/createExpense";
 
 const StackNavigator = () => {
   const Stack = createNativeStackNavigator();
@@ -122,6 +123,11 @@ const StackNavigator = () => {
         <Stack.Screen
           name="Main"
           component={BottomTabs}
+          options={{ headerShown: false }}
+        />
+         <Stack.Screen
+          name="Create Expense"
+          component={createExpense}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

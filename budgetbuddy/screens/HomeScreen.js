@@ -3,10 +3,12 @@ import React, { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Ionicons, MaterialIcons } from "@expo/vector-icons";
 import moment from "moment";
+import { useNavigation } from "@react-navigation/native";
 
 const HomeScreen = () => {
   const [option, setOption] = useState("Daily");
   const [currentDate, setCurrentDate] = useState(moment());
+  const navigation = useNavigation();
   const handlePrevMonth = () => {
     setCurrentDate((prevDate) => moment(prevDate).subtract(1, "month"));
   };
@@ -122,9 +124,21 @@ const HomeScreen = () => {
           </Pressable>
         </View>
       </SafeAreaView>
-      <View>
-        <Pressable>
-          <Ionicons name="add-circle-outline" size={24} color="black" />
+      <View
+        style={{
+          backgroundColor: "#FF7F50",
+          width: 46,
+          height: 46,
+          borderRadius: 23,
+          justifyContent: "center",
+          alignItems: "center",
+          position: "absolute",
+          bottom: 20,
+          right: 15,
+        }}
+      >
+        <Pressable onPress={() => navigation.navigate("Create")}>
+          <Ionicons name="add-circle-outline" size={24} color="white" />
         </Pressable>
       </View>
     </>
