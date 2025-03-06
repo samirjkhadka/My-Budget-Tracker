@@ -5,6 +5,7 @@ import { Ionicons, MaterialIcons } from "@expo/vector-icons";
 import moment from "moment";
 import { useNavigation } from "@react-navigation/native";
 
+
 const HomeScreen = () => {
   const [option, setOption] = useState("Daily");
   const [currentDate, setCurrentDate] = useState(moment());
@@ -137,8 +138,8 @@ const HomeScreen = () => {
           right: 15,
         }}
       >
-        <Pressable onPress={() => navigation.navigate("Create")}>
-          <Ionicons name="add-circle-outline" size={24} color="white" />
+        <Pressable onPress={() => navigation.navigate('Create')}>
+          <Ionicons name="add-outline" size={32} color="white" />
         </Pressable>
       </View>
     </>
