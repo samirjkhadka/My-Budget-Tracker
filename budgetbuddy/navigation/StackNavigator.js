@@ -8,7 +8,8 @@ import HomeScreen from "../screens/HomeScreen";
 import StatsScreen from "../screens/StatsScreen";
 import ProfileScreen from "../screens/ProfileScreen";
 import AccountsScreen from "../screens/AccountsScreen";
-import createExpense from "../screens/CreateExpense";
+// import createExpense from "../screens/CreateExpense";
+import CreateExpense from "../screens/createExpense";
 
 
 
@@ -129,7 +130,7 @@ const StackNavigator = () => {
         />
          <Stack.Screen
           name="Create"
-          component={createExpense}
+          component={CreateExpense}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>
