@@ -105,7 +105,7 @@ const ProfileScreen = () => {
           </View>
           <View style={{ flexDirection: "row", gap: 10, alignItems: "center" }}>
             <MaterialCommunityIcons
-              name="bell-oultline"
+              name="bell-outline"
               size={24}
               color="#282828"
             />
