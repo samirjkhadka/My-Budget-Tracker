@@ -501,6 +501,90 @@ const HomeScreen = () => {
               </View>
             </ScrollView>
           )}
+
+          {option == "Calendar" && (
+            <ScrollView>
+              <View
+                style={{
+                  flexDirection: "row",
+                  justifyContent: "space-between",
+                  marginBottom: 8,
+                  backgroundColor: "#E0E0E0",
+                  paddingVertical: 5,
+                }}
+              >
+                {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map(
+                  (day, index) => (
+                    <Text
+                      style={[
+                        {
+                          fontSize: 15,
+                          fontWeight: "500",
+                          textAlign: "center",
+                          width: boxWidth,
+                          paddingBlock: 3,
+                        },
+                        day == "Sun" && { color: "orange" },
+                        day == "Sat" && { color: "blue" },
+                      ]}
+                    >
+                      {day}
+                    </Text>
+                  )
+                )}
+              </View>
+              <FlatList
+                data={days}
+                renderItem={renderDay}
+                numColumns={7}
+                scrollEnabled={false}
+                keyExtractor={(item, index) => index.toString()}
+              />
+            </ScrollView>
+          )}
+
+          {option == "Summary" && (
+            <View style={{ backgroundColor: "white" }}>
+              <View
+                style={{
+                  flexDirection: "row",
+                  gap: 7,
+                  alignItems: "center",
+                  padding: 12,
+                }}
+              >
+                <Ionicons name="layers-outline" size={24} color="black" />
+                <Text style={{ fontSize: 14, fontWeight: "500" }}>
+                  Accounts
+                </Text>
+              </View>
+              <View
+                style={{
+                  marginTop: 7,
+                  marginHorizontal: 12,
+                  padding: 12,
+                  borderColor: "#E0E0E0",
+                  borderWidth: 0.7,
+                  borderRadius: 6,
+                  flexDirection: "row",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                }}
+              >
+                <Text style={{ fontSize: 15, color: "gray" }}>
+                  Exp. (Cash, Accounts)
+                </Text>
+                <Text style={{ fontSize: 15, color: "gray" }}>NPR 0.00</Text>
+              </View>
+              <View
+                style={{
+                  height: 14,
+                  backgroundColor: "#E0E0E0",
+                  marginTop: 20,
+                }}
+              />
+            </View>
+          )}
         </View>
       </SafeAreaView>
       <View
