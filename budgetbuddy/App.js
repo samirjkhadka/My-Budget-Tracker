@@ -9,6 +9,7 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
+import { ModalPortal } from 'react-native-modals';
 
 
 import {
@@ -56,6 +57,7 @@ function App() {
   return (
     <>
    <StackNavigator/>
+   <ModalPortal/>
 
    </>
   );

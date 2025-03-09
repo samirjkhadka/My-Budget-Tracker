@@ -9,7 +9,7 @@ import StatsScreen from "../screens/StatsScreen";
 import ProfileScreen from "../screens/ProfileScreen";
 import AccountsScreen from "../screens/AccountsScreen";
 // import createExpense from "../screens/CreateExpense";
-import CreateExpense from "../screens/createExpense";
+import CreateExpense from "../screens/CreateExpense";
 
 
 
